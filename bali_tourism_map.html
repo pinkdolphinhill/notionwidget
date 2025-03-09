@@ -1,0 +1,1094 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_57a454b10390b3ec5b195a03fc817e74 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+    <script src="https://cdn.jsdelivr.net/gh/python-visualization/folium@main/folium/templates/leaflet_heat.min.js"></script>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_57a454b10390b3ec5b195a03fc817e74" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_57a454b10390b3ec5b195a03fc817e74 = L.map(
+                "map_57a454b10390b3ec5b195a03fc817e74",
+                {
+                    center: [-8.3405, 115.092],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 10,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_0e7aec891ee7328decfd108da25a1638 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_0e7aec891ee7328decfd108da25a1638.addTo(map_57a454b10390b3ec5b195a03fc817e74);
+        
+    
+            var heat_map_c1d08f13ca1b31c296c55b30571a0f32 = L.heatLayer(
+                [[-8.829, 115.0868, 4.2], [-8.6213, 115.087, 3.9], [-8.4405, 115.2803, 3.7], [-8.5187, 115.26, 3.5], [-8.3742, 115.4508, 3.3], [-8.4208, 115.5872, 3.1], [-8.2425, 115.3758, 2.9], [-8.5414, 115.1769, 2.8], [-8.7218, 115.1709, 2.7], [-8.2747, 115.166, 2.6], [-8.8104, 115.1689, 2.5], [-8.6854, 115.1677, 2.4], [-8.722, 115.1724, 2.3], [-8.7279, 115.5441, 2.2], [-8.4156, 115.3122, 2.1], [-8.1659, 115.0965, 2.0], [-8.1489, 115.0445, 1.9], [-8.3884, 115.1437, 1.8], [-8.6897, 115.2602, 1.7], [-8.5236, 115.2873, 1.6], [-8.5069, 115.2604, 2.9], [-8.5097, 115.262, 1.4], [-8.5032, 115.2655, 1.3]],
+                {
+  "minOpacity": 0.5,
+  "maxZoom": 15,
+  "radius": 25,
+  "blur": 15,
+}
+            );
+        
+    
+            heat_map_c1d08f13ca1b31c296c55b30571a0f32.addTo(map_57a454b10390b3ec5b195a03fc817e74);
+        
+    
+            var marker_3b7dbfe32697f0e98327346fc3892344 = L.marker(
+                [-8.829, 115.0868],
+                {
+}
+            ).addTo(map_57a454b10390b3ec5b195a03fc817e74);
+        
+    
+            var icon_2fe594f81e3b88957a6a48467bbec0ce = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_327ab498beeb98ed30c1355ff4e5c5ff = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_94c3980fe7e7d59fcb1a3ebaf12594b0 = $(`<div id="html_94c3980fe7e7d59fcb1a3ebaf12594b0" style="width: 100.0%; height: 100.0%;">     <h4 style='margin:0; padding:0;'>Uluwatu Temple</h4>     <b>Rank:</b> #1<br>     <b>Annual Visitors:</b> 4.2 million     </div>`)[0];
+                popup_327ab498beeb98ed30c1355ff4e5c5ff.setContent(html_94c3980fe7e7d59fcb1a3ebaf12594b0);
+            
+        
+
+        marker_3b7dbfe32697f0e98327346fc3892344.bindPopup(popup_327ab498beeb98ed30c1355ff4e5c5ff)
+        ;
+
+        
+    
+    
+                marker_3b7dbfe32697f0e98327346fc3892344.setIcon(icon_2fe594f81e3b88957a6a48467bbec0ce);
+            
+    
+            var marker_7f1f71d22e16374d173954d5da62f587 = L.marker(
+                [-8.6213, 115.087],
+                {
+}
+            ).addTo(map_57a454b10390b3ec5b195a03fc817e74);
+        
+    
+            var icon_0fd4dda3e7519185fee34e6fcafd9b49 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_888dec83ef07c0ded77109a02ec6b8ce = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_c0dac6bbda44d69bc791aa754bd7ff68 = $(`<div id="html_c0dac6bbda44d69bc791aa754bd7ff68" style="width: 100.0%; height: 100.0%;">     <h4 style='margin:0; padding:0;'>Tanah Lot</h4>     <b>Rank:</b> #2<br>     <b>Annual Visitors:</b> 3.9 million     </div>`)[0];
+                popup_888dec83ef07c0ded77109a02ec6b8ce.setContent(html_c0dac6bbda44d69bc791aa754bd7ff68);
+            
+        
+
+        marker_7f1f71d22e16374d173954d5da62f587.bindPopup(popup_888dec83ef07c0ded77109a02ec6b8ce)
+        ;
+
+        
+    
+    
+                marker_7f1f71d22e16374d173954d5da62f587.setIcon(icon_0fd4dda3e7519185fee34e6fcafd9b49);
+            
+    
+            var marker_828547dd2d2097a7592ea90453d236b9 = L.marker(
+                [-8.4405, 115.2803],
+                {
+}
+            ).addTo(map_57a454b10390b3ec5b195a03fc817e74);
+        
+    
+            var icon_ad86e53d348100de0ce71493381634d0 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b09da1b7a7e0b91751217df80e1b0bf6 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_bd6523cb815379ecd94f8c4a6210fed7 = $(`<div id="html_bd6523cb815379ecd94f8c4a6210fed7" style="width: 100.0%; height: 100.0%;">     <h4 style='margin:0; padding:0;'>Tegallalang Rice Terrace</h4>     <b>Rank:</b> #3<br>     <b>Annual Visitors:</b> 3.7 million     </div>`)[0];
+                popup_b09da1b7a7e0b91751217df80e1b0bf6.setContent(html_bd6523cb815379ecd94f8c4a6210fed7);
+            
+        
+
+        marker_828547dd2d2097a7592ea90453d236b9.bindPopup(popup_b09da1b7a7e0b91751217df80e1b0bf6)
+        ;
+
+        
+    
+    
+                marker_828547dd2d2097a7592ea90453d236b9.setIcon(icon_ad86e53d348100de0ce71493381634d0);
+            
+    
+            var marker_0efebcc0e3ef144c67b56352296b66b9 = L.marker(
+                [-8.5187, 115.26],
+                {
+}
+            ).addTo(map_57a454b10390b3ec5b195a03fc817e74);
+        
+    
+            var icon_ec2e572fbf3d8924b3d30ae9acb1d8aa = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0e9e2024e40a4fc088ec7a96cbf15487 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_255774e9e7a12380fe3d589a0739436a = $(`<div id="html_255774e9e7a12380fe3d589a0739436a" style="width: 100.0%; height: 100.0%;">     <h4 style='margin:0; padding:0;'>Ubud Monkey Forest</h4>     <b>Rank:</b> #4<br>     <b>Annual Visitors:</b> 3.5 million     </div>`)[0];
+                popup_0e9e2024e40a4fc088ec7a96cbf15487.setContent(html_255774e9e7a12380fe3d589a0739436a);
+            
+        
+
+        marker_0efebcc0e3ef144c67b56352296b66b9.bindPopup(popup_0e9e2024e40a4fc088ec7a96cbf15487)
+        ;
+
+        
+    
+    
+                marker_0efebcc0e3ef144c67b56352296b66b9.setIcon(icon_ec2e572fbf3d8924b3d30ae9acb1d8aa);
+            
+    
+            var marker_8512344708b4d77e50235b662b00b3d6 = L.marker(
+                [-8.3742, 115.4508],
+                {
+}
+            ).addTo(map_57a454b10390b3ec5b195a03fc817e74);
+        
+    
+            var icon_5bc35a0d00eda7ac2e9048f48863773d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_03470664ed688b3f20d5f6dbd6e2ebbe = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_edca6347de109244c36b68c1887cdb33 = $(`<div id="html_edca6347de109244c36b68c1887cdb33" style="width: 100.0%; height: 100.0%;">     <h4 style='margin:0; padding:0;'>Besakih Temple</h4>     <b>Rank:</b> #5<br>     <b>Annual Visitors:</b> 3.3 million     </div>`)[0];
+                popup_03470664ed688b3f20d5f6dbd6e2ebbe.setContent(html_edca6347de109244c36b68c1887cdb33);
+            
+        
+
+        marker_8512344708b4d77e50235b662b00b3d6.bindPopup(popup_03470664ed688b3f20d5f6dbd6e2ebbe)
+        ;
+
+        
+    
+    
+                marker_8512344708b4d77e50235b662b00b3d6.setIcon(icon_5bc35a0d00eda7ac2e9048f48863773d);
+            
+    
+            var marker_ab3ad36a15e0e58937fd500274938503 = L.marker(
+                [-8.4208, 115.5872],
+                {
+}
+            ).addTo(map_57a454b10390b3ec5b195a03fc817e74);
+        
+    
+            var icon_7a77e7993e8dce1d8429cde251744496 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f74c12d146b09d094dee9310ef779cc8 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_86d4c271b9736fe163fd9ebef31e1ed3 = $(`<div id="html_86d4c271b9736fe163fd9ebef31e1ed3" style="width: 100.0%; height: 100.0%;">     <h4 style='margin:0; padding:0;'>Tirta Gangga</h4>     <b>Rank:</b> #6<br>     <b>Annual Visitors:</b> 3.1 million     </div>`)[0];
+                popup_f74c12d146b09d094dee9310ef779cc8.setContent(html_86d4c271b9736fe163fd9ebef31e1ed3);
+            
+        
+
+        marker_ab3ad36a15e0e58937fd500274938503.bindPopup(popup_f74c12d146b09d094dee9310ef779cc8)
+        ;
+
+        
+    
+    
+                marker_ab3ad36a15e0e58937fd500274938503.setIcon(icon_7a77e7993e8dce1d8429cde251744496);
+            
+    
+            var marker_a0709bd2767ece565c6097ac86114ab8 = L.marker(
+                [-8.2425, 115.3758],
+                {
+}
+            ).addTo(map_57a454b10390b3ec5b195a03fc817e74);
+        
+    
+            var icon_1d247588229107edb4abcbea5d8973db = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_430bce5a4f20a96810ce494d0e6c795f = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_68de71d8bfc0a3468556560901792647 = $(`<div id="html_68de71d8bfc0a3468556560901792647" style="width: 100.0%; height: 100.0%;">     <h4 style='margin:0; padding:0;'>Mount Batur</h4>     <b>Rank:</b> #7<br>     <b>Annual Visitors:</b> 2.9 million     </div>`)[0];
+                popup_430bce5a4f20a96810ce494d0e6c795f.setContent(html_68de71d8bfc0a3468556560901792647);
+            
+        
+
+        marker_a0709bd2767ece565c6097ac86114ab8.bindPopup(popup_430bce5a4f20a96810ce494d0e6c795f)
+        ;
+
+        
+    
+    
+                marker_a0709bd2767ece565c6097ac86114ab8.setIcon(icon_1d247588229107edb4abcbea5d8973db);
+            
+    
+            var marker_21edd9afd15da0bbffa375f9903cb72c = L.marker(
+                [-8.5414, 115.1769],
+                {
+}
+            ).addTo(map_57a454b10390b3ec5b195a03fc817e74);
+        
+    
+            var icon_d9bbd4adcbd3d8ffad74bcd68823d1bd = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f3d8df7dc956e8572b39779d671fb62c = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_6b03c96a57e8f00d90fdc80c4299d124 = $(`<div id="html_6b03c96a57e8f00d90fdc80c4299d124" style="width: 100.0%; height: 100.0%;">     <h4 style='margin:0; padding:0;'>Taman Ayun Temple</h4>     <b>Rank:</b> #8<br>     <b>Annual Visitors:</b> 2.8 million     </div>`)[0];
+                popup_f3d8df7dc956e8572b39779d671fb62c.setContent(html_6b03c96a57e8f00d90fdc80c4299d124);
+            
+        
+
+        marker_21edd9afd15da0bbffa375f9903cb72c.bindPopup(popup_f3d8df7dc956e8572b39779d671fb62c)
+        ;
+
+        
+    
+    
+                marker_21edd9afd15da0bbffa375f9903cb72c.setIcon(icon_d9bbd4adcbd3d8ffad74bcd68823d1bd);
+            
+    
+            var marker_8ba1ff9d26e9e2b5522d24de1035c65f = L.marker(
+                [-8.7218, 115.1709],
+                {
+}
+            ).addTo(map_57a454b10390b3ec5b195a03fc817e74);
+        
+    
+            var icon_2660ef18d595165aa51531fc88f14206 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5085046a281a909c544a5039efb2774f = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_d3b280d23d560180980af39df6e30cb8 = $(`<div id="html_d3b280d23d560180980af39df6e30cb8" style="width: 100.0%; height: 100.0%;">     <h4 style='margin:0; padding:0;'>Waterbom Bali</h4>     <b>Rank:</b> #9<br>     <b>Annual Visitors:</b> 2.7 million     </div>`)[0];
+                popup_5085046a281a909c544a5039efb2774f.setContent(html_d3b280d23d560180980af39df6e30cb8);
+            
+        
+
+        marker_8ba1ff9d26e9e2b5522d24de1035c65f.bindPopup(popup_5085046a281a909c544a5039efb2774f)
+        ;
+
+        
+    
+    
+                marker_8ba1ff9d26e9e2b5522d24de1035c65f.setIcon(icon_2660ef18d595165aa51531fc88f14206);
+            
+    
+            var marker_0a6d2db577277037879684dae9f891c6 = L.marker(
+                [-8.2747, 115.166],
+                {
+}
+            ).addTo(map_57a454b10390b3ec5b195a03fc817e74);
+        
+    
+            var icon_ae1ee0a1bb30eea5f5f3a9aa11832092 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_12bade0d6f4d9be85432921a5eb8754e = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_b6e3d615a8e8c032496a9006c8cf61f2 = $(`<div id="html_b6e3d615a8e8c032496a9006c8cf61f2" style="width: 100.0%; height: 100.0%;">     <h4 style='margin:0; padding:0;'>Ulun Danu Beratan Temple</h4>     <b>Rank:</b> #10<br>     <b>Annual Visitors:</b> 2.6 million     </div>`)[0];
+                popup_12bade0d6f4d9be85432921a5eb8754e.setContent(html_b6e3d615a8e8c032496a9006c8cf61f2);
+            
+        
+
+        marker_0a6d2db577277037879684dae9f891c6.bindPopup(popup_12bade0d6f4d9be85432921a5eb8754e)
+        ;
+
+        
+    
+    
+                marker_0a6d2db577277037879684dae9f891c6.setIcon(icon_ae1ee0a1bb30eea5f5f3a9aa11832092);
+            
+    
+            var marker_a25597f60cdba08e88eaa16c19bb6547 = L.marker(
+                [-8.8104, 115.1689],
+                {
+}
+            ).addTo(map_57a454b10390b3ec5b195a03fc817e74);
+        
+    
+            var icon_073e8029c38313dbe3340436a6e296d3 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ad343f4bb08ce740f0cd2ac99a57c43d = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_ec383570879e6e4a9c22f8acfc67224b = $(`<div id="html_ec383570879e6e4a9c22f8acfc67224b" style="width: 100.0%; height: 100.0%;">     <h4 style='margin:0; padding:0;'>GWK Cultural Park</h4>     <b>Rank:</b> #11<br>     <b>Annual Visitors:</b> 2.5 million     </div>`)[0];
+                popup_ad343f4bb08ce740f0cd2ac99a57c43d.setContent(html_ec383570879e6e4a9c22f8acfc67224b);
+            
+        
+
+        marker_a25597f60cdba08e88eaa16c19bb6547.bindPopup(popup_ad343f4bb08ce740f0cd2ac99a57c43d)
+        ;
+
+        
+    
+    
+                marker_a25597f60cdba08e88eaa16c19bb6547.setIcon(icon_073e8029c38313dbe3340436a6e296d3);
+            
+    
+            var marker_2e19ff87a5ad73c0db44afc9105e0d00 = L.marker(
+                [-8.6854, 115.1677],
+                {
+}
+            ).addTo(map_57a454b10390b3ec5b195a03fc817e74);
+        
+    
+            var icon_77a0877fb5fefedbc4e15ad258c9045c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0f3636ff97e549e4b938b536b6f6da0e = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_582e225bf018420fefd43356c44ba973 = $(`<div id="html_582e225bf018420fefd43356c44ba973" style="width: 100.0%; height: 100.0%;">     <h4 style='margin:0; padding:0;'>Seminyak Beach</h4>     <b>Rank:</b> #12<br>     <b>Annual Visitors:</b> 2.4 million     </div>`)[0];
+                popup_0f3636ff97e549e4b938b536b6f6da0e.setContent(html_582e225bf018420fefd43356c44ba973);
+            
+        
+
+        marker_2e19ff87a5ad73c0db44afc9105e0d00.bindPopup(popup_0f3636ff97e549e4b938b536b6f6da0e)
+        ;
+
+        
+    
+    
+                marker_2e19ff87a5ad73c0db44afc9105e0d00.setIcon(icon_77a0877fb5fefedbc4e15ad258c9045c);
+            
+    
+            var marker_a2ed79e71b56bfce410e84391bc2e496 = L.marker(
+                [-8.722, 115.1724],
+                {
+}
+            ).addTo(map_57a454b10390b3ec5b195a03fc817e74);
+        
+    
+            var icon_7286383d370f40a4072668e0f59f9df0 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f06590613189518c50df1128fbdb64aa = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_f3e5f6ded6c9b61380aa6101fb06c388 = $(`<div id="html_f3e5f6ded6c9b61380aa6101fb06c388" style="width: 100.0%; height: 100.0%;">     <h4 style='margin:0; padding:0;'>Kuta Beach</h4>     <b>Rank:</b> #13<br>     <b>Annual Visitors:</b> 2.3 million     </div>`)[0];
+                popup_f06590613189518c50df1128fbdb64aa.setContent(html_f3e5f6ded6c9b61380aa6101fb06c388);
+            
+        
+
+        marker_a2ed79e71b56bfce410e84391bc2e496.bindPopup(popup_f06590613189518c50df1128fbdb64aa)
+        ;
+
+        
+    
+    
+                marker_a2ed79e71b56bfce410e84391bc2e496.setIcon(icon_7286383d370f40a4072668e0f59f9df0);
+            
+    
+            var marker_7e242f76578fdd173329fe1aec777bcb = L.marker(
+                [-8.7279, 115.5441],
+                {
+}
+            ).addTo(map_57a454b10390b3ec5b195a03fc817e74);
+        
+    
+            var icon_1c8c3806e5d16f1b67f248480485fbd1 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_6a7a0832bb7d1290b48496742170a38e = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_2c71e0a524cd786a422f997494de0c3d = $(`<div id="html_2c71e0a524cd786a422f997494de0c3d" style="width: 100.0%; height: 100.0%;">     <h4 style='margin:0; padding:0;'>Nusa Penida</h4>     <b>Rank:</b> #14<br>     <b>Annual Visitors:</b> 2.2 million     </div>`)[0];
+                popup_6a7a0832bb7d1290b48496742170a38e.setContent(html_2c71e0a524cd786a422f997494de0c3d);
+            
+        
+
+        marker_7e242f76578fdd173329fe1aec777bcb.bindPopup(popup_6a7a0832bb7d1290b48496742170a38e)
+        ;
+
+        
+    
+    
+                marker_7e242f76578fdd173329fe1aec777bcb.setIcon(icon_1c8c3806e5d16f1b67f248480485fbd1);
+            
+    
+            var marker_138f3dcfb2e30b62c6c3b53757a3b09e = L.marker(
+                [-8.4156, 115.3122],
+                {
+}
+            ).addTo(map_57a454b10390b3ec5b195a03fc817e74);
+        
+    
+            var icon_a3685935375866c1141fe3a48fc0a135 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4214f76653c098ed30d19593c2cbe6dc = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_9dfff3fb00fc0d3661cf6ce2a24538cd = $(`<div id="html_9dfff3fb00fc0d3661cf6ce2a24538cd" style="width: 100.0%; height: 100.0%;">     <h4 style='margin:0; padding:0;'>Tirta Empul Temple</h4>     <b>Rank:</b> #15<br>     <b>Annual Visitors:</b> 2.1 million     </div>`)[0];
+                popup_4214f76653c098ed30d19593c2cbe6dc.setContent(html_9dfff3fb00fc0d3661cf6ce2a24538cd);
+            
+        
+
+        marker_138f3dcfb2e30b62c6c3b53757a3b09e.bindPopup(popup_4214f76653c098ed30d19593c2cbe6dc)
+        ;
+
+        
+    
+    
+                marker_138f3dcfb2e30b62c6c3b53757a3b09e.setIcon(icon_a3685935375866c1141fe3a48fc0a135);
+            
+    
+            var marker_0672bb9c8f70c442d5953bbb2c4b9173 = L.marker(
+                [-8.1659, 115.0965],
+                {
+}
+            ).addTo(map_57a454b10390b3ec5b195a03fc817e74);
+        
+    
+            var icon_fddb8a3182456f73c000d6f50b8209d7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_85158a19b8d40988ae3fdb0e37460fd4 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_85b1cce4d9ec468eac2c25c7bee35a56 = $(`<div id="html_85b1cce4d9ec468eac2c25c7bee35a56" style="width: 100.0%; height: 100.0%;">     <h4 style='margin:0; padding:0;'>Sekumpul Waterfall</h4>     <b>Rank:</b> #16<br>     <b>Annual Visitors:</b> 2.0 million     </div>`)[0];
+                popup_85158a19b8d40988ae3fdb0e37460fd4.setContent(html_85b1cce4d9ec468eac2c25c7bee35a56);
+            
+        
+
+        marker_0672bb9c8f70c442d5953bbb2c4b9173.bindPopup(popup_85158a19b8d40988ae3fdb0e37460fd4)
+        ;
+
+        
+    
+    
+                marker_0672bb9c8f70c442d5953bbb2c4b9173.setIcon(icon_fddb8a3182456f73c000d6f50b8209d7);
+            
+    
+            var marker_f7fe841d9140f7b41618ed3efbe1b8e5 = L.marker(
+                [-8.1489, 115.0445],
+                {
+}
+            ).addTo(map_57a454b10390b3ec5b195a03fc817e74);
+        
+    
+            var icon_3e1838a0c2a2dbac7ba1244c3c18f17b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d3298481a191e1c95db5173ce6a924a6 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_1125c6ddcbf93ee5b1b38025d86077d4 = $(`<div id="html_1125c6ddcbf93ee5b1b38025d86077d4" style="width: 100.0%; height: 100.0%;">     <h4 style='margin:0; padding:0;'>Lovina Beach</h4>     <b>Rank:</b> #17<br>     <b>Annual Visitors:</b> 1.9 million     </div>`)[0];
+                popup_d3298481a191e1c95db5173ce6a924a6.setContent(html_1125c6ddcbf93ee5b1b38025d86077d4);
+            
+        
+
+        marker_f7fe841d9140f7b41618ed3efbe1b8e5.bindPopup(popup_d3298481a191e1c95db5173ce6a924a6)
+        ;
+
+        
+    
+    
+                marker_f7fe841d9140f7b41618ed3efbe1b8e5.setIcon(icon_3e1838a0c2a2dbac7ba1244c3c18f17b);
+            
+    
+            var marker_9a962a69b9d3f3117d33f94d507a6982 = L.marker(
+                [-8.3884, 115.1437],
+                {
+}
+            ).addTo(map_57a454b10390b3ec5b195a03fc817e74);
+        
+    
+            var icon_73d0e167ba948ee59c0215a2341bf1bd = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5adea13a3f28b038a978db63e8b43c60 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_d437751f474a11ed95e7c7756deda558 = $(`<div id="html_d437751f474a11ed95e7c7756deda558" style="width: 100.0%; height: 100.0%;">     <h4 style='margin:0; padding:0;'>Jatiluwih Rice Terraces</h4>     <b>Rank:</b> #18<br>     <b>Annual Visitors:</b> 1.8 million     </div>`)[0];
+                popup_5adea13a3f28b038a978db63e8b43c60.setContent(html_d437751f474a11ed95e7c7756deda558);
+            
+        
+
+        marker_9a962a69b9d3f3117d33f94d507a6982.bindPopup(popup_5adea13a3f28b038a978db63e8b43c60)
+        ;
+
+        
+    
+    
+                marker_9a962a69b9d3f3117d33f94d507a6982.setIcon(icon_73d0e167ba948ee59c0215a2341bf1bd);
+            
+    
+            var marker_13873f639eeb98b1570addeffe558e92 = L.marker(
+                [-8.6897, 115.2602],
+                {
+}
+            ).addTo(map_57a454b10390b3ec5b195a03fc817e74);
+        
+    
+            var icon_2bd3d09c8baf362574b5a751def3f2b1 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_249f4abba9c4ff552595c26a852c0b9e = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_97c293bd3cb47f29465bf08879adefc4 = $(`<div id="html_97c293bd3cb47f29465bf08879adefc4" style="width: 100.0%; height: 100.0%;">     <h4 style='margin:0; padding:0;'>Sanur Beach</h4>     <b>Rank:</b> #19<br>     <b>Annual Visitors:</b> 1.7 million     </div>`)[0];
+                popup_249f4abba9c4ff552595c26a852c0b9e.setContent(html_97c293bd3cb47f29465bf08879adefc4);
+            
+        
+
+        marker_13873f639eeb98b1570addeffe558e92.bindPopup(popup_249f4abba9c4ff552595c26a852c0b9e)
+        ;
+
+        
+    
+    
+                marker_13873f639eeb98b1570addeffe558e92.setIcon(icon_2bd3d09c8baf362574b5a751def3f2b1);
+            
+    
+            var marker_ae56cc22de5bce81a225029a484d49d9 = L.marker(
+                [-8.5236, 115.2873],
+                {
+}
+            ).addTo(map_57a454b10390b3ec5b195a03fc817e74);
+        
+    
+            var icon_d3c80bb19e5aaf1db3d3b50b1ec674d6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1cbe88ed07ffed4316c44cd284941aa8 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_d4941086f00ff3e7f8c19a62ba5f74b9 = $(`<div id="html_d4941086f00ff3e7f8c19a62ba5f74b9" style="width: 100.0%; height: 100.0%;">     <h4 style='margin:0; padding:0;'>Goa Gajah</h4>     <b>Rank:</b> #20<br>     <b>Annual Visitors:</b> 1.6 million     </div>`)[0];
+                popup_1cbe88ed07ffed4316c44cd284941aa8.setContent(html_d4941086f00ff3e7f8c19a62ba5f74b9);
+            
+        
+
+        marker_ae56cc22de5bce81a225029a484d49d9.bindPopup(popup_1cbe88ed07ffed4316c44cd284941aa8)
+        ;
+
+        
+    
+    
+                marker_ae56cc22de5bce81a225029a484d49d9.setIcon(icon_d3c80bb19e5aaf1db3d3b50b1ec674d6);
+            
+    
+            var marker_43517b8c282e5729337b965b92cbd743 = L.marker(
+                [-8.5069, 115.2604],
+                {
+}
+            ).addTo(map_57a454b10390b3ec5b195a03fc817e74);
+        
+    
+            var icon_0a60aeecf269faebe2d4846b0573ee43 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_061114485969b92dedbd8ce29e466a61 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_a8e8a2ffb0b8e273df00bf6826844094 = $(`<div id="html_a8e8a2ffb0b8e273df00bf6826844094" style="width: 100.0%; height: 100.0%;">     <h4 style='margin:0; padding:0;'>Ubud Palace (Puri Saren Agung)</h4>     <b>Rank:</b> #21<br>     <b>Annual Visitors:</b> 2.9 million     </div>`)[0];
+                popup_061114485969b92dedbd8ce29e466a61.setContent(html_a8e8a2ffb0b8e273df00bf6826844094);
+            
+        
+
+        marker_43517b8c282e5729337b965b92cbd743.bindPopup(popup_061114485969b92dedbd8ce29e466a61)
+        ;
+
+        
+    
+    
+                marker_43517b8c282e5729337b965b92cbd743.setIcon(icon_0a60aeecf269faebe2d4846b0573ee43);
+            
+    
+            var marker_3786ff7b20147833d1a1357fcd8491f9 = L.marker(
+                [-8.5097, 115.262],
+                {
+}
+            ).addTo(map_57a454b10390b3ec5b195a03fc817e74);
+        
+    
+            var icon_18f9e6003e6c74035d8b71ed968bf19c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0ff3096b5b31c10b084103398cfada47 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_818927ad1e3ecad1a3dd76f04654af90 = $(`<div id="html_818927ad1e3ecad1a3dd76f04654af90" style="width: 100.0%; height: 100.0%;">     <h4 style='margin:0; padding:0;'>Blanco Renaissance Museum</h4>     <b>Rank:</b> #22<br>     <b>Annual Visitors:</b> 1.4 million     </div>`)[0];
+                popup_0ff3096b5b31c10b084103398cfada47.setContent(html_818927ad1e3ecad1a3dd76f04654af90);
+            
+        
+
+        marker_3786ff7b20147833d1a1357fcd8491f9.bindPopup(popup_0ff3096b5b31c10b084103398cfada47)
+        ;
+
+        
+    
+    
+                marker_3786ff7b20147833d1a1357fcd8491f9.setIcon(icon_18f9e6003e6c74035d8b71ed968bf19c);
+            
+    
+            var marker_db5657c022c3485a113a91d177831724 = L.marker(
+                [-8.5032, 115.2655],
+                {
+}
+            ).addTo(map_57a454b10390b3ec5b195a03fc817e74);
+        
+    
+            var icon_c7e6a6e330c433e23ead9da889d877e4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_df88c38e025f739da2fbd9d01f56395a = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_b31b26d6adc73a316ab734f7f1be7b2c = $(`<div id="html_b31b26d6adc73a316ab734f7f1be7b2c" style="width: 100.0%; height: 100.0%;">     <h4 style='margin:0; padding:0;'>Agung Rai Museum of Art (ARMA)</h4>     <b>Rank:</b> #23<br>     <b>Annual Visitors:</b> 1.3 million     </div>`)[0];
+                popup_df88c38e025f739da2fbd9d01f56395a.setContent(html_b31b26d6adc73a316ab734f7f1be7b2c);
+            
+        
+
+        marker_db5657c022c3485a113a91d177831724.bindPopup(popup_df88c38e025f739da2fbd9d01f56395a)
+        ;
+
+        
+    
+    
+                marker_db5657c022c3485a113a91d177831724.setIcon(icon_c7e6a6e330c433e23ead9da889d877e4);
+            
+    
+            var tile_layer_6a9f16d796aa6f244a9f09fc0f38961b = L.tileLayer(
+                "Stamen Terrain",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "Map data \u00a9 OpenStreetMap contributors, CC-BY-SA, Imagery \u00a9 Stadia Maps",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_6a9f16d796aa6f244a9f09fc0f38961b.addTo(map_57a454b10390b3ec5b195a03fc817e74);
+        
+    
+            var layer_control_04cf3fa663921bb57c0a91f90daace92_layers = {
+                base_layers : {
+                    "cartodbpositron" : tile_layer_0e7aec891ee7328decfd108da25a1638,
+                    "stamenterrain" : tile_layer_6a9f16d796aa6f244a9f09fc0f38961b,
+                },
+                overlays :  {
+                    "macro_element_c1d08f13ca1b31c296c55b30571a0f32" : heat_map_c1d08f13ca1b31c296c55b30571a0f32,
+                },
+            };
+            let layer_control_04cf3fa663921bb57c0a91f90daace92 = L.control.layers(
+                layer_control_04cf3fa663921bb57c0a91f90daace92_layers.base_layers,
+                layer_control_04cf3fa663921bb57c0a91f90daace92_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": true,
+  "autoZIndex": true,
+}
+            ).addTo(map_57a454b10390b3ec5b195a03fc817e74);
+
+        
+    
+            tile_layer_0e7aec891ee7328decfd108da25a1638.addTo(map_57a454b10390b3ec5b195a03fc817e74);
+        
+    
+            heat_map_c1d08f13ca1b31c296c55b30571a0f32.addTo(map_57a454b10390b3ec5b195a03fc817e74);
+        
+    
+                marker_3b7dbfe32697f0e98327346fc3892344.setIcon(icon_2fe594f81e3b88957a6a48467bbec0ce);
+            
+    
+                marker_7f1f71d22e16374d173954d5da62f587.setIcon(icon_0fd4dda3e7519185fee34e6fcafd9b49);
+            
+    
+                marker_828547dd2d2097a7592ea90453d236b9.setIcon(icon_ad86e53d348100de0ce71493381634d0);
+            
+    
+                marker_0efebcc0e3ef144c67b56352296b66b9.setIcon(icon_ec2e572fbf3d8924b3d30ae9acb1d8aa);
+            
+    
+                marker_8512344708b4d77e50235b662b00b3d6.setIcon(icon_5bc35a0d00eda7ac2e9048f48863773d);
+            
+    
+                marker_ab3ad36a15e0e58937fd500274938503.setIcon(icon_7a77e7993e8dce1d8429cde251744496);
+            
+    
+                marker_a0709bd2767ece565c6097ac86114ab8.setIcon(icon_1d247588229107edb4abcbea5d8973db);
+            
+    
+                marker_21edd9afd15da0bbffa375f9903cb72c.setIcon(icon_d9bbd4adcbd3d8ffad74bcd68823d1bd);
+            
+    
+                marker_8ba1ff9d26e9e2b5522d24de1035c65f.setIcon(icon_2660ef18d595165aa51531fc88f14206);
+            
+    
+                marker_0a6d2db577277037879684dae9f891c6.setIcon(icon_ae1ee0a1bb30eea5f5f3a9aa11832092);
+            
+    
+                marker_a25597f60cdba08e88eaa16c19bb6547.setIcon(icon_073e8029c38313dbe3340436a6e296d3);
+            
+    
+                marker_2e19ff87a5ad73c0db44afc9105e0d00.setIcon(icon_77a0877fb5fefedbc4e15ad258c9045c);
+            
+    
+                marker_a2ed79e71b56bfce410e84391bc2e496.setIcon(icon_7286383d370f40a4072668e0f59f9df0);
+            
+    
+                marker_7e242f76578fdd173329fe1aec777bcb.setIcon(icon_1c8c3806e5d16f1b67f248480485fbd1);
+            
+    
+                marker_138f3dcfb2e30b62c6c3b53757a3b09e.setIcon(icon_a3685935375866c1141fe3a48fc0a135);
+            
+    
+                marker_0672bb9c8f70c442d5953bbb2c4b9173.setIcon(icon_fddb8a3182456f73c000d6f50b8209d7);
+            
+    
+                marker_f7fe841d9140f7b41618ed3efbe1b8e5.setIcon(icon_3e1838a0c2a2dbac7ba1244c3c18f17b);
+            
+    
+                marker_9a962a69b9d3f3117d33f94d507a6982.setIcon(icon_73d0e167ba948ee59c0215a2341bf1bd);
+            
+    
+                marker_13873f639eeb98b1570addeffe558e92.setIcon(icon_2bd3d09c8baf362574b5a751def3f2b1);
+            
+    
+                marker_ae56cc22de5bce81a225029a484d49d9.setIcon(icon_d3c80bb19e5aaf1db3d3b50b1ec674d6);
+            
+    
+                marker_43517b8c282e5729337b965b92cbd743.setIcon(icon_0a60aeecf269faebe2d4846b0573ee43);
+            
+    
+                marker_3786ff7b20147833d1a1357fcd8491f9.setIcon(icon_18f9e6003e6c74035d8b71ed968bf19c);
+            
+    
+                marker_db5657c022c3485a113a91d177831724.setIcon(icon_c7e6a6e330c433e23ead9da889d877e4);
+            
+    
+            tile_layer_6a9f16d796aa6f244a9f09fc0f38961b.addTo(map_57a454b10390b3ec5b195a03fc817e74);
+        
+</script>
+</html>
